@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "hadoop 常用环境变量"
+date:   2018-09-28 14:53 +0800
+categories: learn
+---
+| 环境变量名             | 意义解释                                 |
+| ---------------------- | ---------------------------------------- |
+| HADOOP_HOME            | 计算节点上配置的hadoop client路径        |
+| LD_LIBRARY_PATH        | 计算节点上加载库文件的路径列表           |
+| PWD                    | 当前工作目录                             |
+| df_block_size          | 当前设置的HDFS文件块大小                 |
+| map_input_file         | mapper正在处理得输入文件路径，包含文件名 |
+| mapred_job_id          | 当前作业ID                               |
+| mapred_job_name        | 当前作业名称                             |
+| mapred_tip_id          | 当前任务的第几次重试                     |
+| mapred_task_id         | 任务ID                                   |
+| mapred_task_is_map     | 当前任务是否为map                        |
+| mapred_output_dir      | 计算输出路径                             |
+| mapred_map_tasks       | 计算的map任务数                          |
+| mapred_reduce_tasks    | 计算的reduce的任务数                     |
+| mapred_work_output_dir | task临时输出目录                         |
+| mapred_output_dir      | job输出路径                              |
+
+1. mapred_work_output_dir解释
+
+为了避免冲突，Map/Reduce框架为每次尝试执行任务都建立和维护一个特殊的 
+
+\${mapred.output.dir}/_temporary/_​${taskid}子目录，这个目录位于本次尝试执行任务输出结果所在的FileSystem上，可以通过 ${mapred.work.output.dir}来访问这个子目录。 对于成功完成的任务尝试，只有\${mapred.output.dir}/_temporary/_${taskid}下的文件会*移动*到${mapred.output.dir}。当然，框架会丢弃那些失败的任务尝试的子目录。这种处理过程对于应用程序来说是完全透明的。
+
+在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过[ FileOutputFormat.getWorkOutputPath()](http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf))获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。
+
+注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/_temporary/_{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在[ FileOutputFormat.getWorkOutputPath() ](http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf))路径下创建side-file即可。

@@ -8,7 +8,7 @@
 
 facebook:
   name: "Facebook"
-  baseURL: "https://www.facebook.com/"
+  baseURL: "https://www.facebook.com/people/"
   icon: "fa-facebook"
 
 github:
@@ -90,3 +90,8 @@ yelp:
   name: "Yelp"
   baseURL: "https://{{ site.author.yelp }}.yelp.com"
   icon: "fa-yelp"
+
+zhihu:
+  name: "知乎"
+  baseURL: "https://www.zhihu.com/people/"
+  icon: "fa-zhihu"

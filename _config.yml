@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: hulifa's blog
+title: 小扯在此
 
 # Short description of your site
-description: hulifa's blog website
+description: 一个记录的地方
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,11 +20,14 @@ description: hulifa's blog website
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "http://hulifa.cn"
+  博文: "/"
+  标签: "/tags"
+  #搜索: "/search"
+  关于我: "aboutme"
+  #Resources:
+  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #  - Learn markdown: "http://www.markdowntutorial.com/"
+  #Author's home: "http://hulifa.cn"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -51,27 +54,28 @@ footer-link-col: "#404040"
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-# navbar-img: "/img/bgimage.png"
-# footer-img: "/img/bgimage.png"
-# page-img: "/img/bgimage.png"
+navbar-img: "/img/bgimage.png"
+footer-img: "/img/bgimage.png"
+#page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: jessehu
+  name: 胡小扯
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
+  github: zhibuzu
+  zhihu: "hu-qi-zhi-32"
+  facebook: "胡启智/100011033957800"
+  email: "hu2014jesse@gmail.com"
   rss: true
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  #twitter: xxx
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -87,13 +91,15 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
+    #twitter: true
+    #facebook: true
+    #linkedin: true
+    #知乎: true
+    #github: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+#url-pretty: "hulifa.cn"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -118,13 +124,13 @@ url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
+disqus: "jessehu-blog"
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
 
 # To use Facebook Comments, fill in a Facebook App ID
-# fb_comment_id: ""
+#fb_comment_id: "704858580025049"
 
 # To use Staticman comments, fill in repository, branch, and endpoint
 staticman:
@@ -136,6 +142,9 @@ staticman:
     # If you use reCaptcha, you must also set these parameters in staticman.yml
     siteKey  : # Use your own site key, you need to apply for one on Google
     secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+
+# Gittalk comments
+#gitalk-comments: 
 
 # --- Misc --- #
 
@@ -151,12 +160,13 @@ excerpt_length: 50
 title-separator: "-"
 
 # Ruby Date Format
-date_format: "%B %-d, %Y"
+#date_format: "%B %-d, %Y"
+date_format: "%Y-%m-%d %H:%M"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Vancouver"
+timezone: "Asia/Shanghai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
