@@ -2,7 +2,7 @@
 layout: post
 title: "你了解字符集、字符编码吗？"
 date: 2018-09-28 12:49 +0800
-categories: learn
+tags: ["字符编码"]
 ---
 
 

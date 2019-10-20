@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "shell test命令常用条件"
+title: "Bash test命令常用条件"
 date: 2018-09-28 18:33 0800
-categories: learn
+tags: ["Bash"]
 ---
+
+Bash test命令常用条件
 
 ## 数值测试
 

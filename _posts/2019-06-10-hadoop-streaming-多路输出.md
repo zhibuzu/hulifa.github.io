@@ -2,7 +2,7 @@
 layout: post
 title: "hadoop streaming 多路输出"
 date: 2019-06-10 21:12 +0800
-categories: learn
+tags: [Hadoop]
 ---
 
 1. 多路输出指定outputformat

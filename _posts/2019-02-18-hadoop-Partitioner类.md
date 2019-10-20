@@ -2,7 +2,7 @@
 layout: post
 title: "hadoop partitioner类"
 date: 2019-06-10 21:04 +0800
-categories: learn
+tags: [Hadoop]
 ---
 
 1. 指定partitioner类（二次排序）

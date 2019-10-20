@@ -2,11 +2,12 @@
 layout: post
 title: "taglist-vim快捷键"
 date: 2019-06-10 21:04 +0800
-categories: learn
+tags: ["Vim"]
 ---
 
-```
+Vim插件taglist的常用快捷键
 
+```
 <CR>          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
 o             在一个新打开的窗口中显示光标下tag
 <Space>       显示光标下tag的原型定义
@@ -22,4 +23,6 @@ x             taglist窗口放大和缩小，方便查看较长的tag
 q             关闭taglist窗口
 <F1>          显示帮助 
 ```
+
+
 
