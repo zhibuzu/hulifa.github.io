@@ -20,10 +20,10 @@ description: 一个记录的地方
 
 # List of links in the navigation bar
 navbar-links:
-  博文: "/"
-  标签: "/tags"
+  "<i class=\"fa fa-file-text\"></i>博文": "/"
+  "<i class=\"fa fa-tags\"></i>标签": "/tags"
   #搜索: "/search"
-  关于我: "aboutme"
+  "<i class=\"fa fa-user\"></i>关于我": "aboutme"
   #Resources:
   #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #  - Learn markdown: "http://www.markdowntutorial.com/"

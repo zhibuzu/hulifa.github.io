@@ -22,9 +22,29 @@ p {
   margin: 30px 0;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 800;
 }
+
+.blog-post h1, .blog-post h2,.blog-post h3,.blog-post h4,.blog-post h5,.blog-post h6 {
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    line-height: 28px;
+    color: rgb(119, 48, 152);
+    border-bottom: 1px solid rgb(119, 48, 152);
+    border-top-color: rgb(119, 48, 152);
+    border-right-color: rgb(119, 48, 152);
+    border-left-color: rgb(119, 48, 152);
+    margin: 1em auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    width: 85%;
+}
+
 a {
   color: {{ site.link-col }};
 }
@@ -337,6 +357,7 @@ footer .theme-by {
 .post-preview .post-title {
   font-size: 30px;
   margin-top: 0;
+  color: rgb(119, 48, 152);
 }
 .post-preview .post-subtitle {
   margin: 0;
@@ -674,12 +695,18 @@ pre {
   margin: 0;
 }
 .highlight > pre {
-  background-image: linear-gradient(
+  #background-image: linear-gradient(
     rgba(0,0,0,0.06), rgba(0,0,0,0.06) 1.5em, rgba(0,0,0,0.03) 1.5em, rgba(0,0,0,0.03) 3em);
   background-size: auto 3em;
   background-position-y: 10px;
   border: 1px solid rgba(0,0,0,0.1);
-  border-left: 7px solid #444;
+    border-left: 5px solid #c16ce8;
+    background: #F7FAFB;
+    font-size: 0.8em;
+    line-height: 2em;
+    font-weight: 100;
+    padding: 1em;
+    margin: 0 0 1em 0;
 }
 .highlight > pre:not([class~="highlight"]) { /* code block with line number */
   padding: 0;
