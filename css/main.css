@@ -345,6 +345,10 @@ footer .theme-by {
   border-bottom: 0;
 }
 
+.post-preview >a {
+    color: rgb(119, 48, 152);
+}
+
 .post-preview a {
   text-decoration: none;
   color: #404040;
