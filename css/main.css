@@ -364,7 +364,7 @@ footer .theme-by {
 .post-preview .post-title {
   font-size: 26px;
   margin-top: 0;
-  color: rgb(119, 48, 152);
+  /*color: rgb(119, 48, 152);*/
 }
 .post-preview .post-subtitle {
   margin: 0;
