@@ -357,7 +357,7 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 0;
   color: rgb(119, 48, 152);
 }
@@ -404,7 +404,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 26px;
   }
 }
 
