@@ -8,7 +8,9 @@ layout: null
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
+  word-break: break-all;
+  font-size: 16px;
+  letter-spacing: 0.05em;
   color: #404040;
   position: relative;
   background-color: {{ site.page-col }};
@@ -352,6 +354,10 @@ footer .theme-by {
   color: #404040;
 }
 
+.post-preview >a {
+    color: rgb(119, 48, 152);
+}
+
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
@@ -359,9 +365,8 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 0;
-  color: rgb(119, 48, 152);
 }
 .post-preview .post-subtitle {
   margin: 0;
@@ -406,7 +411,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 26px;
   }
 }
 
